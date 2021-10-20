@@ -7,6 +7,55 @@
 
 /* Google Fonts */
 html {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
+ol {
+    margin-left: 1rem;
+}
+li {
+    padding-left: 1rem;
+    padding-top: .75rem;
+}
+ol > ol {
+    list-style-type: lower-alpha;
+}
+
+.main {
+    max-width: 978px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.faq {
+    margin-top: 4rem;
+}
+.faq__title {
+    font-weight: 600;
+    color: rgb(60, 64, 67);
+}
+
+.faq__text {
+    font-size: .875rem;
+    line-height: 1.5rem;
+    color: rgba(0, 0, 0, 0.87);
+}
+.faq__link {
+    color: rgb(51, 103, 214);
+    text-decoration: none;
+}
+.faq__link:hover {
+    cursor: pointer;
+}
+
+
+.header__link {
+    color: rgb(95, 99, 104);
+}
+.header__link.active {
+    color: rgb(51, 103, 214);
+}
+
+.footer__link {
+    color: rgba(61, 61, 61, 0.8);
+}
