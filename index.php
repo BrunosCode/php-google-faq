@@ -26,9 +26,9 @@
             "question" => "Perché il mio account è associato a un paese?",
             "answer" => "Il tuo account è associato a un paese (o territorio) nei Termini di servizio per poter stabilire due cose:
 
-            <ol>
+            <ol class='faq__list faq__list--ordered'>
                 <li>La società consociata Google che offre i servizi, tratta le tue informazioni ed è responsabile del rispetto delle leggi sulla privacy vigenti. Generalmente Google offre i propri servizi per i consumatori tramite una delle due società seguenti:
-                    <ol>
+                    <ol class='faq__list faq__list--ordered'>
                         <li>Google Ireland Limited, se gli utenti sono residenti nello Spazio economico europeo (paesi dell'Unione europea, oltre a Islanda, Liechtenstein e Norvegia) o in Svizzera.</li>
                         <li>Google LLC, con sede negli Stati Uniti, per il resto del mondo.</li>
                     </ol>
@@ -67,19 +67,50 @@
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
     <!-- /google fonts -->
     <link rel="stylesheet" href="css/style.css">
     <title>Google Faq</title>
 </head>
 <body>
-    <div class="main">
-        <?php foreach($faqs as $faq) { ?>
-            <div class="faq">
-                <h2 class="faq__title"><?= $faq["question"] ?></h2>
-                <div class="faq__text"><?= $faq["answer"] ?></div>
-            </div>
-        <?php } ?>
-    </div>
+    <header class="header">
+        <div class="row header__row">
+            <img class="header__logo" src="images/googlelogo_clr_74x24px.svg" alt="Google Logo">
+            <h1 class="header__title">Privacy e termini</h1>
+        </div>
+        <nav class="header__row">
+            <ul class="row nav list--reset">
+                <li><a class="nav__link" href="#">Introduzione</a></li>
+                <li><a class="nav__link" href="#">Norme sulla privacy</a></li>
+                <li><a class="nav__link" href="#">Termini di servizio</a></li>
+                <li><a class="nav__link" href="#">Tecnologia</a></li>
+                <li><a class="nav__link active" href="#">Domande frequenti</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+    <main>
+        <div class="container">
+            <?php foreach($faqs as $faq) { ?>
+                <div class="faq">
+                    <h2 class="faq__title"><?= $faq["question"] ?></h2>
+                    <div class="faq__text"><?= $faq["answer"] ?></div>
+                </div>
+            <?php } ?>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container row">
+            <nav>
+                <ul class="row footer__nav list--reset">
+                    <li><a class="footer__link" href="#">Google</a></li>
+                    <li><a class="footer__link" href="#">Tutto su Google</a></li>
+                    <li><a class="footer__link" href="#">Privacy</a></li>
+                    <li><a class="footer__link" href="#">Termini</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
 </body>
 </html>
